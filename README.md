@@ -1,5 +1,6 @@
 # weather-prediction
 =========================
+
 Backend service to fetch weather prediction. This is a simple spring boot application build to serve the list of weather prediction data for next couple of days.
 It connect to openweathermap internally to fetch data. Read more on openweathermap [here](https://openweathermap.org/)
 
