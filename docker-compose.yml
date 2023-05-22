@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+    prediction:
+        image: prediction
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./prediction:/prediction
+    predictionUI:
+        image: prediction-ui
+        ports:
+            - "4200:4200"
+        depends_on:
+            - prediction

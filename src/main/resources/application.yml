@@ -1,0 +1,36 @@
+
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+name: dev-yml
+environment: development
+enabled: true
+server:
+  application:
+    url: http://api.openweathermap.org/data/2.5/forecast
+    appid: d2929e9483efc82c82c32ee7e02d563e
+    units: metric
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: ERROR
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+name: prod-yml
+environment: production
+enabled: false
+server:
+  application:
+    url: prod-url
+    appid: prod-appid
+    units: metric
+logging:
+  level:
+    root: INFO
+    org.springframework.web: ERROR
