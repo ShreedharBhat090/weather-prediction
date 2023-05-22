@@ -8,9 +8,9 @@ It connect to openweathermap internally to fetch data. Read more on openweatherm
 
 
 ## Installation
--Clone the repository into your local. 
--Run mvn clean install using command prompt. 
--Right click on PredictionApplication.java and run the file.
--To deploy the api to docker, just run mvn package command and then docker compose up command
+*Clone the repository into your local. 
+*Run mvn clean install using command prompt. 
+*Right click on PredictionApplication.java and run the file.
+*To deploy the api to docker, just run mvn package command and then docker compose up command
  
 
