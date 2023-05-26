@@ -8,6 +8,7 @@ name: dev-yml
 environment: development
 enabled: true
 server:
+  contextPath=/:
   application:
     url: http://api.openweathermap.org/data/2.5/forecast
     appid: d2929e9483efc82c82c32ee7e02d563e
@@ -16,6 +17,7 @@ logging:
   level:
     root: DEBUG
     org.springframework.web: ERROR
+
 ---
 
 spring:

@@ -24,7 +24,7 @@ public class WeeklyPredictionController {
         this.weeklyPredictionService = weeklyPredictionService;
     }
 
-    @GetMapping("/prediction")
+    @GetMapping("/weather-prediction")
     public ResponseEntity<Prediction> getPrediction(@RequestParam Map<String, String> allRequestParams) {
         if (!allRequestParams.containsKey("q") || allRequestParams.get("q").isBlank()) {
             throw new CityNotFoundException();

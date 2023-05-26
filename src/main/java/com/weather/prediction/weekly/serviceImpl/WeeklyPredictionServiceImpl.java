@@ -52,20 +52,25 @@ public class WeeklyPredictionServiceImpl implements WeeklyPredictionService {
         prediction.getList().stream().forEach(
                 item -> {
                     if (item.getWeather().get(0).getMain().equalsIgnoreCase("Rain")) {
-                        item.setComment("Carry umbrella!");
+                        item.setComment("Carry umbrella");
                     } else if (item.getWeather().get(0).getMain().equalsIgnoreCase("Thunderstorms")) {
                         item.setComment("Don’t step out! A Storm is brewing!");
                     } else if (item.getWeather().get(0).getMain().equalsIgnoreCase("Snow")) {
                         item.setComment("It's snowing outside! Do you want to build a snowman?");
                         //added for fun :)
-                    }else{
-                        item.setComment("Enjoy the hours!");
                     }
                     if (item.getMain().getTemp() > 40) {
                         item.setComment("Use sunscreen lotion");
                     }
                     if (Utils.convertMeterspersecToMilesperhour(item.getWind().getSpeed()) > 10) {
-                        item.setComment("It’s too windy, watch out!");
+                        if(item.getComment()!=null) {
+                            item.setComment(item.getComment()+ " and It’s too windy, watch out!");
+                        }else{
+                            item.setComment("It’s too windy, watch out!");
+                        }
+                    }
+                    if(item.getComment()==null || item.getComment().isEmpty()){
+                            item.setComment("Enjoy the hours!");
                     }
                     logger.info(String.valueOf(prediction));
                 }
