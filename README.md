@@ -5,6 +5,8 @@ It connect to openweathermap internally to fetch data. Read more on openweatherm
 
 ---
 ## Documentation
+The request from the UI will be received and validated against the different mandatory parameters. The application will call openweathermap and collect weather data and process the data to understand the climate and introduces different comments according to the weather. the collective response will be sent back to the requested end.
+![flow chart](https://github.com/ShreedharBhat090/weather-prediction/blob/develop/prediction/flowchart.jpg?raw=true)
 
 
 ## Installation
